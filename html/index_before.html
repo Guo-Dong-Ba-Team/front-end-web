@@ -3,17 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>果冻网主页</title>
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css">
+{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/jquery.fullPage.css" %}">
   <!-- <link rel="stylesheet" type="text/css" href="../sidebar/css/component.css"> -->
   <!-- <link rel="stylesheet" type="text/css" href="../sidebar/css/demo.css"> -->
   <!-- <link rel="stylesheet" type="text/css" href="../sidebar/css/icons.css"> -->
   <!-- <link rel="stylesheet" type="text/css" href="../sidebar/css/normalize.css"> -->
-	<link rel="stylesheet" type="text/css" href="../css/index.css">
-	<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="../js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.js"></script>
-	<script type="text/javascript" src="../js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+	<script type="text/javascript" src="{% static "js/jquery.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/jquery.fullPage.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/index.js" %}"></script>
 	<!-- // <script type="text/javascript" src="../sidebar/js/classie.js"></script> -->
 	<!-- // <script type="text/javascript" src="../sidebar/js/modernizr.custom.js"></script> -->
 	<!-- // <script type="text/javascript" src="../sidebar/js/sidebarEffects.js"></script> -->
@@ -30,14 +31,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>   
-          <a class="navbar-brand" href="index.html">果动网</a>
+          <a class="navbar-brand" href="/index/">果动网</a>
         </div>
         <!-- 自适应布局结束 -->
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">主页</a></li>
-            <li><a href="about.html" >关于我们</a></li>
-            <li><a href="contact.html" >加入我们</a></li>
+            <li class="active"><a href="/index/">主页</a></li>
+            <li><a href="/about/" >关于我们</a></li>
+            <li><a href="/contact/" >加入我们</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">场馆介绍<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -52,8 +53,8 @@
               </ul>
             </li>
             <ul class="nav navbar-nav navbar-right re-log">
-        		<li><a href="register.html" class="navbar-link" target="blank">注册</a></li>
-        		<li><a href="login.html" class="navbar-link" target="blank">登录</a></li>
+        		<li><a href="/register/" class="navbar-link" target="blank">注册</a></li>
+        		<li><a href="/login/" class="navbar-link" target="blank">登录</a></li>
         	</ul>
           </ul>
         </div><!--/.nav-collapse -->
@@ -98,13 +99,13 @@
    <!-- 轮播（Carousel）项目 -->
    			<div class="carousel-inner">
       			<div class="item active">
-         			<a href="#"><img src="../images/Venues/p01.jpg" alt="First slide"></a>
+         			<a href="#"><img src="{% static "images/Venues/p01.jpg" %}" alt="First slide"></a>
       			</div>
       			<div class="item">
-         				<a href="#"><img src="../images/Venues/p02.jpg" alt="Second slide"></a>
+         				<a href="#"><img src="{% static "images/Venues/p02.jpg" %}" alt="Second slide"></a>
       			</div>
       			<div class="item">
-         				<a href="#"><img src="../images/Venues/p03.jpg" alt="Third slide"></a>
+         				<a href="#"><img src="{% static "images/Venues/p03.jpg" %}" alt="Third slide"></a>
       			</div>
    			</div>
    <!-- 轮播（Carousel）导航 -->
@@ -163,13 +164,13 @@
    <!-- 轮播（Carousel）项目 -->
    			<div class="carousel-inner">
       			<div class="item active">
-         			<a href="#"><img src="../images/Venues/p01.jpg" alt="First slide"></a>
+         			<a href="#"><img src="{% static "images/Venues/p01.jpg" %}" alt="First slide"></a>
       			</div>
       			<div class="item">
-         				<a href="#"><img src="../images/Venues/p02.jpg" alt="Second slide"></a>
+         				<a href="#"><img src="{% static "images/Venues/p02.jpg" %}" alt="Second slide"></a>
       			</div>
       			<div class="item">
-         				<a href="#"><img src="../images/Venues/p03.jpg" alt="Third slide"></a>
+         				<a href="#"><img src="{% static "images/Venues/p03.jpg" %}" alt="Third slide"></a>
       			</div>
    			</div>
    <!-- 轮播（Carousel）导航 -->
@@ -228,13 +229,13 @@
    <!-- 轮播（Carousel）项目 -->
    			<div class="carousel-inner">
       			<div class="item active">
-         			<a href="#"><img src="../images/Venues/p01.jpg" alt="First slide"></a>
+         			<a href="#"><img src="{% static "images/Venues/p01.jpg" %}" alt="First slide"></a>
       			</div>
       			<div class="item">
-         				<a href="#"><img src="../images/Venues/p02.jpg" alt="Second slide"></a>
+         				<a href="#"><img src="{% static "images/Venues/p02.jpg" %}" alt="Second slide"></a>
       			</div>
       			<div class="item">
-         				<a href="#"><img src="../images/Venues/p03.jpg" alt="Third slide"></a>
+         				<a href="#"><img src="{% static "images/Venues/p03.jpg" %}" alt="Third slide"></a>
       			</div>
    			</div>
    <!-- 轮播（Carousel）导航 -->
@@ -294,13 +295,13 @@
    <!-- 轮播（Carousel）项目 -->
    			<div class="carousel-inner">
       			<div class="item active">
-         			<a href="#"><img src="../images/Venues/p01.jpg" alt="First slide"></a>
+         			<a href="#"><img src="{% static "images/Venues/p01.jpg" %}" alt="First slide"></a>
       			</div>
       			<div class="item">
-         				<a href="#"><img src="../images/Venues/p02.jpg" alt="Second slide"></a>
+         				<a href="#"><img src="{% static "images/Venues/p02.jpg" %}" alt="Second slide"></a>
       			</div>
       			<div class="item">
-         				<a href="#"><img src="../images/Venues/p03.jpg" alt="Third slide"></a>
+         				<a href="#"><img src="{% static "images/Venues/p03.jpg" %}" alt="Third slide"></a>
       			</div>
    			</div>
    <!-- 轮播（Carousel）导航 -->

@@ -313,14 +313,14 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
   transition: all 0.5s;
 }
 .navbar-fixed-top {
-  background: #fff;
+
   transition-duration: 0.5s;
   border-bottom: 1px solid #e7eaec !important;
   z-index: 2030;
 }
 .navbar-fixed-top,
 .navbar-static-top {
-  background: #f3f3f4;
+
 }
 .fixed-nav #wrapper {
   margin-top: 60px;

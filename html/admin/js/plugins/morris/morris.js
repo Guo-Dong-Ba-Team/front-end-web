@@ -656,7 +656,7 @@
     }
 
     Hover.prototype.update = function(html, x, y) {
-      this.html;
+      this.html(html);
       this.show();
       return this.moveTo(x, y);
     };

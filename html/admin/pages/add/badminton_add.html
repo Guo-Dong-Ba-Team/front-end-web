@@ -214,5 +214,17 @@
         <!-- AdminLTE App -->
         <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
         <!--城市选择 -->
+        <script type="text/javascript" src="../js/jquery.cityselect.js"></script>
+        <script type="text/javascript">
+        $(function(){
+            $("#city").citySelect({
+            url:"../js/city.min.js", 
+            prov:"安徽", //省份 
+            city:"合肥", //城市 
+            dist:"", //区县  
+            nodata:"none"
+            }); 
+        });
+        </script>
     </body>
 </html>

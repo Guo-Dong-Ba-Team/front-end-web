@@ -34,6 +34,18 @@
 
 	<!-- Add custom CSS here -->
 	<link href="../css/custom.css" rel="stylesheet">
+	<!-- JavaScript Files -->
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.easing.min.js"></script>
+	<script src="../js/jquery.mixitup.min.js"></script>
+	<script src="../js/jquery.flexslider.js"></script>
+	<script src="../js/supersized.3.2.7.min.js"></script>
+	<script src="../js/jquery.animateNumber.js"></script>
+	<script src="../js/jquery.appear.js"></script>
+	<script src="../js/animations.js"></script>
+	<script src="../js/jquery.stellar.min.js"></script>
+	<script src="../js/main.js"></script>   <!--里面有背景图片-->
 
 	<!--[if lt IE 9]>
       	<script src="../js/html5shiv.js"></script>
@@ -66,7 +78,7 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
 				<i class="fa fa-bars"></i>
 				</button>
 				<a class="navbar-brand" href="#page-top">
-				<i class="iconfont">&#xe604;</i><div class="logozi"><b> 果动网</b><br><i></i></div>
+				<i class="iconfont"></i><div class="logozi"><b> 果动网</b><br><i></i></div>
 				</a>
 			</div>
         <!-- 自适应布局结束 -->
@@ -87,8 +99,8 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
                 <li><a href="#billiards">台球馆</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">敬请期待</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="#">其他场馆1</a></li>
+                <li><a href="#">其他场馆2</a></li>
               </ul>
             </li>
             <ul class="nav navbar-nav navbar-right re-log">
@@ -137,17 +149,33 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
 
 <!-- Welcome content -->
 <section class="welcome-content">
-	<div class="container">
+	<div class="container" style="height:300px">
 		<div class="row">
 			<div class="col-md-12 welcome-text animated">
 				<h3>欢迎加入果动网</h3>
-				<div class="line1"></div>
-				<p><span class="yahei">具体内容</span>
-                  <br>
-             总结语</p>
-				<a class="btn1" href="#">更多（模态框实现）</a>
+				<div id="about_summerize"><p><span class="yahei">具体内容</span><br/>总结语</p>
+					<button class="btn1" id="about_modal_button" style="background-color:white">更多</button>
+				</div>
+				<div class="model" id="about_modal" z-index=1 style="position:absolute;top:25px;left:294px" hidden="hidden">
+   					<div class="modal-dialog">
+      					<div class="modal-content">
+         					<div class="modal-header">
+            					<h3 class="modal-title" id="myModalLabel">关于我们</h3>
+         					</div>
+         					<div class="modal-body" style="height:180px">
+         						<p style="margin-top:5px">我们是来自中国科学技术大学的一群敢于改变世界，创造未来的青年！
+         						</p>
+         					</div>
+         					<div class="modal-footer">
+            					<button type="button" class="btn btn-default modal_close" >关闭
+            					</button>
+            				</div>
+      					</div><!-- /.modal-content -->
+					</div><!-- /.modal -->
+				</div>
 			</div>
-		</div>
+		<!-- 模态框（Modal） -->
+		
 	</div>
 </section>
 <!-- Welcome content -->
@@ -327,19 +355,6 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
 <!-- Footer content -->
 
 </div>
-
-<!-- JavaScript Files -->
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.easing.min.js"></script>
-<script src="../js/jquery.mixitup.min.js"></script>
-<script src="../js/jquery.flexslider.js"></script>
-<script src="../js/supersized.3.2.7.min.js"></script>
-<script src="../js/jquery.animateNumber.js"></script>
-<script src="../js/jquery.appear.js"></script>
-<script src="../js/animations.js"></script>
-<script src="../js/jquery.stellar.min.js"></script>
-<script src="../js/main.js"></script>   <!--里面有背景图片-->
 
 <script type="text/javascript">
 function showMK(){

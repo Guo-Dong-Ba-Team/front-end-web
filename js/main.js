@@ -119,3 +119,16 @@ jQuery(document).ready(function ($) {
     }
 
 });
+
+//===========================modal==========================//
+$(document).ready(function(){
+	$("#about_modal_button").bind("click",function(){
+		$("#about_summerize").attr('hidden', 'hidden');
+		$("#about_modal").removeAttr('hidden');
+	})
+	$("button.modal_close").bind("click",function(){
+		$("#about_modal").attr('hidden', 'hidden');
+		$("#about_summerize").removeAttr('hidden');
+	})
+	
+})

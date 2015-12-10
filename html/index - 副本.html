@@ -46,6 +46,7 @@
 	<script src="../js/animations.js"></script>
 	<script src="../js/jquery.stellar.min.js"></script>
 	<script src="../js/main.js"></script>   <!--里面有背景图片-->
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=jBOdFG4p3VOlzN2PMMb93VIa"></script>
 
 	<!--[if lt IE 9]>
       	<script src="../js/html5shiv.js"></script>
@@ -86,17 +87,17 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
           <ul class="nav navbar-nav">
             <!-- <li class="page-scroll active"><a href="#home.html">主页</a></li> -->
             <li class="page-scroll"><a href="#home" >关于我们</a></li>
-            <li class="page-scroll"><a href="#team" >团队介绍</a></li>
-            <li class="page-scroll"><a href="#testimonials" >入驻商家</a></li>
+            <!-- <li class="page-scroll"><a href="#team" >团队介绍</a></li> -->
+            <!-- <li class="page-scroll"><a href="#testimonials" >入驻商家</a></li> -->
             <li class="page-scroll"><a href="#contact" >联系我们</a></li>
             <li class="page-scroll"><a href="#download" >手机客户端下载</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">场馆介绍<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">场馆信息<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#badminton">羽毛球馆</a></li>
-                <li><a href="#swimming">游泳馆</a></li>
-                <li><a href="#basketball">篮球馆</a></li>
-                <li><a href="#billiards">台球馆</a></li>
+                <li><a href="#location">羽毛球馆</a></li>
+                <li><a href="#location">游泳馆</a></li>
+                <li><a href="#location">篮球馆</a></li>
+                <li><a href="#location">台球馆</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">敬请期待</li>
                 <li><a href="#">其他场馆1</a></li>
@@ -124,19 +125,19 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
 					<div id="intro-slider" class="flexslider">
 						<ul class="slides">
 							<li>
-								<h3 class="brand-heading">标题</h3>
-								<div class="line"></div>
-								<p class="intro-text yah">内容</p>
+								<!-- <h3 class="brand-heading">标题</h3> -->
+								<!-- <div class="line"></div> -->
+								<!-- <p class="intro-text yah">内容</p> -->
 							</li>
 							<li>
-								<h3 class="brand-heading">标题2</h3>
-								<div class="line"></div>
-								<p class="intro-text yah">内容</p>
+								<!-- <h3 class="brand-heading">标题2</h3> -->
+								<!-- <div class="line"></div> -->
+								<!-- <p class="intro-text yah">内容</p> -->
 							</li>
                             <li>
-								<h3 class="brand-heading">标题3</h3>
-								<div class="line"></div>
-								<p class="intro-text yah">内容</p>
+								<!-- <h3 class="brand-heading">标题3</h3> -->
+								<!-- <div class="line"></div> -->
+								<!-- <p class="intro-text yah">内容</p> -->
 							</li>
 						</ul>
 					</div>
@@ -213,7 +214,7 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
 <!-- Facts content -->
 
 <!-- Team content -->
-<section class="team-content" id="team">
+<!-- <section class="team-content" id="team">
 	<div class="container">
 		<div class="row">
 			<div class="fade-text animated">
@@ -251,19 +252,11 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <!-- Team content -->
 
-<!-- Services content -->
-
-<!-- Services content -->
-
-<!-- Portfolio content -->
-
-<!-- Portfolio content -->
-
 <!-- Testimonial content -->
-<section class="testimonial-wrap" id="testimonials" data-slide="3" data-stellar-background-ratio="0.5">
+<!-- <section class="testimonial-wrap" id="testimonials" data-slide="3" data-stellar-background-ratio="0.5">
 	<div class="cover"></div>
 	<div class="container">
 		<div class="row">
@@ -294,7 +287,7 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <!-- Testimonial content -->
 
 <!-- Contact content -->
@@ -347,6 +340,20 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
 </section>
 <!-- 手机客户端下载 -->
 
+<!-- 场馆信息展示 -->
+<section class="location-wrap" id="location">
+	<div class="container">
+		<div class="row">
+			<div class="fade-text animated">
+				<h3>场馆分布</h3>
+				<div class="line1"></div>
+				<p>想了解场馆的分布吗？</p>
+	 			<div style="width:700px;height:450px;border:#ccc solid 1px;font-size:12px" id="map"></div>	
+	 		</div>
+		</div>
+	</div>
+</section>
+	
 <!-- Footer content -->
 <footer>
 	<ul class="social yah">果动网</UL>
@@ -357,6 +364,7 @@ A.info:hover    {color:green;background:transparent;text-decoration:underline}
 
 </div>
 
+<!-- 切图 -->
 <script type="text/javascript">
 function showMK(){
 	var num = $("#num").val();
@@ -368,6 +376,71 @@ function showMK(){
 	}
 }
 </script>
+<!-- 切图 -->
+
+<!-- 地图 -->
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(117.291256,31.8889),13);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"地址： 宝山区 沪太路5008弄75号 ",title:"精羽羽毛球馆",imageOffset: {width:-115,height:-21},position:{lat:31.889391,lng:117.282057}},
+        {content:"地址： 蜀山区 黄山路447号",title:"刘郭梁乒乓球俱乐部",imageOffset: {width:-92,height:-21},position:{lat:31.858482,lng:117.278608}},
+        {content:"地址： 蜀山区 五里墩立交西南角105医院对面万科金御华府售楼部1楼",title:"峰轩健身游泳馆",imageOffset: {width:-23,height:-21},position:{lat:31.873692,lng:117.239226}},
+        {content:"地址： 蜀山区 金寨路227号百姓缘大药房3楼(近百脑汇)",title:"百姓缘倍斯特健身俱乐部",imageOffset: {width:-46,height:-21},position:{lat:31.874919,lng:117.28177}},
+        {content:"地址： 蜀山区 潜山路与史河路交叉口合家福3楼(近史河路)",title:"星雅台球厅",imageOffset: {width:-69,height:-21},position:{lat:31.881297,lng:117.33035}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:0});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:false});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+  <!-- 地图 -->
 
 </body>
 </html>
